@@ -297,6 +297,10 @@ in
     # layer rule
     layerrule=animation_type_open:zoom,layer_name:rofi
     layerrule=animation_type_close:zoom,layer_name:rofi
+
+    # Autostart
+    exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots && systemctl --user stop pipewire pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk xdg-desktop-portal-gnome && systemctl --user start pipewire pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk
+    exec-once=/home/${opt-config.username}/.config/mango/autostart.sh
     '';
   };
 }

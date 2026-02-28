@@ -11,6 +11,8 @@ pkgs.writeShellScriptBin "my-wf-autostart" ''
   start-wm $WAYLAND_DISPLAY
   # AGS
   #novel-ags &
+  # Monitors
+  ${opt-config.wl-monitors-cli}
   ${pkgs.dunst}/bin/dunst &
   # Wallpaper
   ${swaybg} -i ${opt-config.wall-img} -m fill &

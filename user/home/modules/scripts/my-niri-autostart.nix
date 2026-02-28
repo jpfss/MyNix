@@ -11,6 +11,8 @@ let
 in
 pkgs.writeShellScriptBin "my-niri-autostart" ''
   start-wm $WAYLAND_DISPLAY
+  # Monitors
+  ${opt-config.wl-monitors-cli}
   # Wallpaper
   ${swaybg} -i ${opt-config.wall-img} -m fill &
   # Notify

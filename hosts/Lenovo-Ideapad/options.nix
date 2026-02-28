@@ -33,6 +33,7 @@
     # }
     monitors = {
     };
+    wl-monitors-cli = "wlr-randr --output eDP-1 --off && wlr-randr --output HDMI-A-1 --mode 1366x768";
 
     # WM Options
     wm = {
@@ -40,30 +41,32 @@
       dwm = true;
       awesome = false;
       i3 = false;
-      openbox = false;
+      openbox = true;
       # Wayland
       dwl = true;
       wayfire = true;
       river = false;
-      labwc = false;
-      niri = false;
-      hypr = false;
+      labwc = true;
+      niri = true;
+      hypr = true;
       sway = false;
       mangowc = false;
     };
     # Packages For this Machine
     packages = with pkgs; [
-      hmcl
+	  nur.repos.novel2430.hmcl
       openttd
       docker
       qemu
       virt-manager
       lutris
+	  codex
       # steam
       wine
       winetricks
       protonup-qt
       #blender
+	  nur.repos.novel2430.shotcut-bin
     ];
     flatpak-packages = [
       # "org.ppsspp.PPSSPP"

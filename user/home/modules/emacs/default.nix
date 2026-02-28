@@ -1,15 +1,17 @@
-{pkgs, custom-pkgs, opt-config, ...}: 
+{pkgs, custom-pkgs, opt-config, pkgs-2505, ...}: 
 let
 in
 {
   home.packages = with pkgs; [
-    custom-pkgs.emacs29-pgtk-xwidget
+  	## For Emacs
+  	custom-pkgs.emacs29-gtk-xwidget
     ripgrep
     findutils
     fd
-    emacsPackages.vterm
+    libtool
     #pkgs.nerd-fonts.symbols-only
-    ## For LSP
+
+	## For LSP
     pandoc # Markdown
     shellcheck # Shell
     lua-language-server # Lua
@@ -19,8 +21,13 @@ in
     nil # Nix
     nodePackages.bash-language-server # Bash
     rust-analyzer # Rust
-    vue-language-server # Vue
+    vue-language-server typescript # Vue
+    typescript-language-server # TS, JS, TSX
     kotlin-language-server # Kotlin
+
+    custom-pkgs.rassumfrassum
+
+	## For Treesitter
   ];
 
 }

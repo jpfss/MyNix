@@ -16,6 +16,8 @@ in
     executable = true;
     text = ''
       start-wm $WAYLAND_DISPLAY
+      # Monitors
+      ${opt-config.wl-monitors-cli}
       # Wallpaper
       ${swaybg} -i ${opt-config.wall-img} -m fill &
       # Bar
@@ -31,9 +33,9 @@ in
       # nm-applet
       ${nm-applet} &
       # xdg-portal
-      dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
-      systemctl --user stop pipewire pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk xdg-desktop-portal-gnome
-      systemctl --user start pipewire pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk
+      # dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
+      # systemctl --user stop pipewire pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk xdg-desktop-portal-gnome
+      # systemctl --user start pipewire pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk
       # Blueman-applet
       ${blutooth-cmd}
       # Media Idle Guard

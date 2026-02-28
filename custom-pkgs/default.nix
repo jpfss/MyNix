@@ -12,5 +12,6 @@
   # shotcut-bin = pkgs.callPackage ./shotcut {};
   hmcl = pkgs.callPackage ./hmcl {};
   gedit = pkgs-2505.callPackage ./gedit {};
-  emacs29-pgtk-xwidget = pkgs.callPackage ./emacs29 {};
+  emacs29-gtk-xwidget = pkgs.callPackage ./emacs29 {};
+  rassumfrassum = pkgs.callPackage ./rassumfrassum {};
 }

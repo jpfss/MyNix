@@ -25,6 +25,7 @@ in
     executable = true;
     text = ''
       start-wm $WAYLAND_DISPLAY
+      ${opt-config.wl-monitors-cli}
       # Wallpaper
       ${swaybg} -i ${opt-config.wall-img} -m fill &
       # bar

@@ -88,7 +88,7 @@
             opt-config = host-conf.config;
             inherit modify-pkgs;
             inherit custom-pkgs;
-            inherit pkgs-2405;
+            inherit pkgs-2505;
             inherit doomemacs;
           };
         }
