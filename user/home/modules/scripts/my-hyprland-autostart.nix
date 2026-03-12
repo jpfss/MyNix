@@ -11,8 +11,6 @@ let
 in
 pkgs.writeShellScriptBin "my-hyprland-autostart" ''
   start-wm $WAYLAND_DISPLAY
-  # Monitors
-  ${opt-config.wl-monitors-cli}
   # Wallpaper
   ${swaybg} -i ${opt-config.wall-img} -m fill &
   # Notify
@@ -38,4 +36,6 @@ pkgs.writeShellScriptBin "my-hyprland-autostart" ''
   systemctl --user start media-idle-guard.service
   # For Wemeet
   flatpak override --user --env=LD_PRELOAD=/app/lib/wemeet/libhook.so com.tencent.wemeet &
+  # Monitors
+  ${opt-config.wl-monitors-cli}
 ''

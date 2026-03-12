@@ -38,22 +38,23 @@
     # }
     monitors = {
     };
+    wl-monitors-cli = "wlr-randr --output DP-1 --mode 1920x1080@60 --transform 90 --pos 0,0 && wlr-randr --output HDMI-A-1 --mode 1920x1080@60 --transform normal --pos 1080,0";
 
     # WM Options
     wm = {
       # X11
       dwm = true;
-      awesome = true;
-      i3 = true;
+      awesome = false;
+      i3 = false;
       openbox = true;
       # Wayland
       dwl = true;
       wayfire = true;
-      river = true;
-      labwc = true;
-      niri = true;
-      hypr = true;
-      sway = true;
+      river = false;
+      labwc = false;
+      niri = false;
+      hypr = false;
+      sway = false;
       mangowc = true;
     };
 

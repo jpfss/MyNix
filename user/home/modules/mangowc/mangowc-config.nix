@@ -209,7 +209,7 @@ in
 
     # scroller layout
     # bind=ALT,e,set_proportion,1.0
-    # bind=ALT,x,switch_proportion_preset,
+    # bind=CTLR+SUPER,s,switch_proportion_preset,
 
     # switch layout
     bind=SUPER,e,setlayout,tile
@@ -259,7 +259,7 @@ in
     bind=CTRL+SUPER,9,toggleview,9
 
     # monitor switch
-    # bind=alt+shift,Left,focusmon,left
+    bind=SUPER,o,focusmon,left
     # bind=alt+shift,Right,focusmon,right
     # bind=SUPER+Alt,Left,tagmon,left
     # bind=SUPER+Alt,Right,tagmon,right

@@ -34,28 +34,8 @@
     #   vrr = "false";
     # }
     monitors = {
-      # "output:LVDS-1" = {
-      #   depth = "8";
-      #   mode = "1366x768";
-      #   position = "auto";
-      #   scale = "1.0";
-      #   transform = "normal";
-      #   vrr = "false";
-      # };
-      # "output:HDMI-A-1" = {
-      #   depth = "8";
-      #   mode = "mirror LVDS-1";
-      #   position = "auto";
-      #   scale = "1.0";
-      #   transform = "normal";
-      #   vrr = "false";
-      # };
     };
-    # Monitors (For Hyprland Config)
-    # Example :
-    # hypr-monitors = [
-    #   "eDP-1, disable"
-    # ];
+    wl-monitors-cli = "";
 
     # WM Options
     wm = {
@@ -68,11 +48,11 @@
       dwl = true;
       wayfire = true;
       river = false;
-      labwc = true;
+      labwc = false;
       niri = false;
       hypr = false;
       sway = false;
-      mangowc = false;
+      mangowc = true;
     };
 
     # Packages For this Machine
